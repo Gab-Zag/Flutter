@@ -1,6 +1,4 @@
-//importa o pacote flutter, material . O material é um pacote flutter para criar uma interface de usuário de acordo com as diretrizes de design de materiais especificadas pelo Android.
 import 'package:flutter/material.dart';
-
 void main() {
   runApp(const MyApp());
 }
@@ -12,11 +10,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Flutter Demo',
-      theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
-        useMaterial3: true,
-      ),
-      home: const MyHomePage(title: 'Flutter Demo Home Page'),
+      home: const MyHomePage(title: 'NRC Teste de Contagem de Pontos'),
     );
   }
 }
@@ -31,37 +25,57 @@ class MyHomePage extends StatefulWidget {
 class _MyHomePageState extends State<MyHomePage> {
   int _counter = 0;
 
+  int _counter2 = 0;
+
   void _incrementCounter() {
     setState(() {
       _counter++;
     });
   }
 
+  void _incrementCounter2(){
+    setState(() {
+      _counter2++;
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        backgroundColor: Theme.of(context).colorScheme.inversePrimary,
-        title: Text(widget.title),
-      ),
-      body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            const Text(
-              'You have pushed the button this many times:',
+      body: Column(
+        children: [
+          Container(
+            height: 407.500,
+
+            child: FractionallySizedBox(
+              widthFactor: 2,
+              heightFactor: 1,
+              child: ElevatedButton(
+                child: Text(
+                  '$_counter',
+                  style: Theme.of(context).textTheme.headlineSmall,
+                  ),
+                onPressed: _incrementCounter,
+              ),
             ),
-            Text(
-              '$_counter',
-              style: Theme.of(context).textTheme.headlineMedium,
+          ),
+
+          Container(
+            height: 407.500,
+
+            child: FractionallySizedBox(
+              widthFactor: 2,
+              heightFactor: 1,
+              child: ElevatedButton(
+                child: Text(
+                  '$_counter2',
+                  style: Theme.of(context).textTheme.headlineSmall,
+                ),
+                onPressed: _incrementCounter2,
+              ),
             ),
-          ],
-        ),
-      ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: _incrementCounter,
-        tooltip: 'Increment',
-        child: const Icon(Icons.add),
+          )
+        ],
       ),
     );
   }
