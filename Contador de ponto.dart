@@ -10,7 +10,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Flutter Demo',
-      home: const MyHomePage(title: 'NRC Teste de Contagem de Pontos'),
+      home: const MyHomePage(title: 'NRC  Contagem de Pontos'),
     );
   }
 }
