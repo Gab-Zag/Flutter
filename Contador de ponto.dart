@@ -88,7 +88,10 @@ class _MyHomePageState extends State<MyHomePage> {
                 elevation: 10,
                 onTap: () => _incrementCounter(),
                 color: Colors.redAccent,
-                child: Text('$_counter',style: Theme.of(context).textTheme.headlineSmall,),
+                child: RotatedBox(
+                  quarterTurns: 1,
+                  child: Text('$_counter',style: TextStyle(color: Colors.white,fontSize: 30,),),
+                )
               )
           ),
           Expanded(
@@ -97,7 +100,10 @@ class _MyHomePageState extends State<MyHomePage> {
                 elevation: 10,
                 onTap: () => _incrementCounter2(),
                 color: Colors.blueAccent,
-                child: Text('$_counter2',style: Theme.of(context).textTheme.headlineSmall,),
+                child: RotatedBox(
+                  quarterTurns: 1,
+                  child: Text('$_counter2',style: TextStyle(color: Colors.white,fontSize: 30,),),
+                )
               )
           ),
         ]
