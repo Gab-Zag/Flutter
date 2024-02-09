@@ -86,18 +86,18 @@ class _MyHomePageState extends State<MyHomePage> {
               child: EasyContainer(
                 padding: 20,
                 elevation: 10,
-                onTap: () => debugPrint('Contador de clicks'),
+                onTap: () => _incrementCounter(),
                 color: Colors.redAccent,
-                child: const CircularProgressIndicator.adaptive(),
+                child: Text('$_counter',style: Theme.of(context).textTheme.headlineSmall,),
               )
           ),
           Expanded(
               child: EasyContainer(
                 padding: 20,
                 elevation: 10,
-                onTap: () => debugPrint('Contador de clicks'),
+                onTap: () => _incrementCounter2(),
                 color: Colors.blueAccent,
-                child: const CircularProgressIndicator.adaptive(),
+                child: Text('$_counter2',style: Theme.of(context).textTheme.headlineSmall,),
               )
           ),
         ]
