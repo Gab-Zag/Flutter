@@ -1,3 +1,4 @@
+import 'package:easy_container/easy_container.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 void main() {
@@ -82,17 +83,21 @@ class _MyHomePageState extends State<MyHomePage> {
     return Column(
         children: <Widget>[
           Expanded(
-              child: Container(
+              child: EasyContainer(
+                padding: 20,
+                elevation: 10,
+                onTap: () => debugPrint('Contador de clicks'),
                 color: Colors.redAccent,
+                child: const CircularProgressIndicator.adaptive(),
               )
           ),
-          Container(
-              height: 40,
-              color: Colors.grey
-          ),
           Expanded(
-              child: Container(
+              child: EasyContainer(
+                padding: 20,
+                elevation: 10,
+                onTap: () => debugPrint('Contador de clicks'),
                 color: Colors.blueAccent,
+                child: const CircularProgressIndicator.adaptive(),
               )
           ),
         ]
