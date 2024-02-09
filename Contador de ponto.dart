@@ -47,10 +47,7 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Flutter Demo',
-      home: const MyHomePage(title: 'NRC  Contagem de Pontos'),
-    );
+    return const MaterialApp(title: 'Flutter Demo',home: MyHomePage(title: 'NRC  Contagem de Pontos'),);
   }
 }
 
@@ -90,7 +87,7 @@ class _MyHomePageState extends State<MyHomePage> {
                 color: Colors.redAccent,
                 child: RotatedBox(
                   quarterTurns: 1,
-                  child: Text('$_counter',style: TextStyle(color: Colors.white,fontSize: 30,),),
+                  child: Text('$_counter',style: const TextStyle(color: Colors.white,fontSize: 30,),),
                 )
               )
           ),
@@ -102,7 +99,7 @@ class _MyHomePageState extends State<MyHomePage> {
                 color: Colors.blueAccent,
                 child: RotatedBox(
                   quarterTurns: 1,
-                  child: Text('$_counter2',style: TextStyle(color: Colors.white,fontSize: 30,),),
+                  child: Text('$_counter2',style: const TextStyle(color: Colors.white,fontSize: 30,),),
                 )
               )
           ),
