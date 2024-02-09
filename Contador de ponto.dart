@@ -79,42 +79,23 @@ class _MyHomePageState extends State<MyHomePage> {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: Column(
-        children: [
-          Container(
-            height: 407.500,
-
-            child: FractionallySizedBox(
-              widthFactor: 2,
-              heightFactor: 1,
-              child: ElevatedButton(
-                child: Text(
-                  '$_counter',
-                  style: Theme.of(context).textTheme.headlineSmall,
-                  ),
-                onPressed: _incrementCounter,
-              ),
-            ),
+    return Column(
+        children: <Widget>[
+          Expanded(
+              child: Container(
+                color: Colors.redAccent,
+              )
           ),
-
           Container(
-            height: 407.500,
-
-            child: FractionallySizedBox(
-              widthFactor: 2,
-              heightFactor: 1,
-              child: ElevatedButton(
-                child: Text(
-                  '$_counter2',
-                  style: Theme.of(context).textTheme.headlineSmall,
-                ),
-                onPressed: _incrementCounter2,
-              ),
-            ),
-          )
-        ],
-      ),
+              height: 40,
+              color: Colors.grey
+          ),
+          Expanded(
+              child: Container(
+                color: Colors.blueAccent,
+              )
+          ),
+        ]
     );
   }
 }
